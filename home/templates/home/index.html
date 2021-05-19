@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Home{% endblock title %}
+{% block content_header %}
+  <div class="">
+    <div class="container text-center">
+      <div class="row">
+        <div class="col-12 m-3">
+          <img src="{% static 'images/logos/cover.png' %}" width="30%" >
+        </div>
+        <div class="col-6 mx-auto">
+          <p class="mt-3">
+            For all your digital Solutions, contact us. We offer a wide range of services in the spectrum of Digital Migration.
+          </p>
+          <h6 class="p-4">
+            The world is changing everyday, let us help you <span class="text-capitalize">transition</span> your business, workplace, organization, school, hospital, and intergrate digital operations in terms of management, marketing and record keeping, to help you reach out to the digital <b>market and audience</b> all over the world.
+          </h6>
+          <p ><a class="btn btn-primary btn-lg" href="{% url 'about' %}" role="button">Learn more</a> </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr>
+{% endblock %}
+
+{% block content %}
+  <div class="row">
+    <div class="col-12 mb-2 text-center">
+      <h2>OUR SERVICES</h2>
+    </div>
+  </div>
+  <hr>
+  <div class="row pb-5">
+    <div class="col-sm-6 col-lg-4">
+      <h3>Web Development</h3>
+      <p> Want to establish your online presence? For businesses, Organiations, community groups, personal brnding, marketing and advertising of products and services, schools, hospitals, and organiing events, we got you covered.</p>
+      <p><a class="btn btn-link" href="{% url 'web' %}">View details »</a></p>
+    </div>
+    <div class="col-sm-6 col-lg-4">
+      <h3>Software Development</h3>
+      <p> You have an Idea or Just looking for a feasible solution to your needs? We offer a wide of development options, and a variety of software packages to manage and run different operations. </p>
+      <p><a class="btn btn-link" href="{% url 'software' %}">View details »</a></p>
+    </div>
+    <div class="col-sm-6 col-lg-4">
+      <h3>Computer Training</h3>
+      <p> Want to gain some computing skills? Or you would like to dive into deep understaning of Programming Technicalities and build a carreer in web and software development? Check out our programs, let us learn together.  </p>
+      <p><a class="btn btn-link" href="{% url 'training' %}">View details »</a></p>
+    </div>
+    <hr>
+    <div class="col-12 text-center">
+      <a href="{% url 'services' %}" class="btn btn-success">Services Page</a>
+    </div>
+  </div>
+{% endblock content %}

@@ -1,0 +1,101 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Services{% endblock title %}
+
+{% block content_header %}
+    <section class="mt-4">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center">
+            <h1>Our Services</h1>
+            <hr>
+            <p> Services tailored to the customer's needs and desires. Let us build something together. We offer you an opportunity to contribute to the building of a solution for your needs. You can also choose to sit back and let us make your idea into an evalasting solution. Affordability, Quality and Usability are key. </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <hr>
+{% endblock content_header %}
+
+{% block content %}
+      <section>
+      <div class="container mt-2 align-content-center">
+        <div class="card-deck">
+            <div class="card">
+              <img src="{% static 'images/web.jpg' %}" class="card-img-top" alt="Web Development">
+              <div class="card-header">
+                <h5 class="card-title">Web Development</h5>
+              </div>
+              <div class="card-body">
+                <p class="card-text">Want to establish your online presence? For businesses, Organiations, community groups, personal brnding, marketing and advertising of products and services, schools, hospitals, and organiing events, we got you covered.</p>
+              </div>
+              <div class="card-footer">
+                <a href="{% url 'web' %}" class="btn btn-primary btn-block">View Details</a>
+              </div>
+            </div>
+            <div class="card">
+              <img src="{% static 'images/software.png' %}" class="card-img-top" alt="Software Development">
+              <div class="card-header">
+                <h5 class="card-title">Software Development</h5>
+              </div>
+              <div class="card-body">
+                <p class="card-text">You have an Idea or Just looking for a feasible solution to your needs? We offer a wide of development options, and a variety of software packages to manage and run different operations. Starting from Data Entry, to running simulations, data analysis and making reports. Software packages for the proper management of schools, businesses, hospitals and other entities.</p>
+              </div>
+              <div class="card-footer">
+                <a href="{% url 'software' %}" class="btn btn-primary btn-block">View Details</a>
+              </div>
+            </div>
+            <div class="card">
+              <img src="{% static 'images/training.jpg' %}" class="card-img-top" alt="Computer Training">
+              <div class="card-header">
+                <h5 class="card-title">Computer Training</h5>
+              </div>
+              <div class="card-body">
+                <p class="card-text">Want to gain some computing skills? Or you would like to dive into deep understaning of Programming Technicalities and build a carreer in web and software development? Check out our programs, let us learn together. </p>
+              </div>
+              <div class="card-footer">
+                <a href="{% url 'training' %}" class="btn btn-primary btn-block">View Details</a>
+              </div>
+            </div>
+          
+        </div>
+      </div>
+    </section>
+    <hr>
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center">
+            <h2>Latest Work</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, et, placeat !</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 col-12 text-center">
+            <img class="img-fluid" src="images/400x400.gif" alt="">
+            <h4>Lorem ipsum dolor sit amet, consectetur elit</h4>
+            <h6>Lorem ipsum dolor sit amet, consectetur elit</h6>
+          </div>
+          <div class="col-md-6 col-12 text-center mt-md-0 mt-2">
+            <img class="img-fluid" src="images/400x400.gif" alt="">
+            <h4>Lorem ipsum dolor sit amet, consectetur elit</h4>
+            <h6>Lorem ipsum dolor sit amet, consectetur elit</h6>
+          </div>
+        </div>
+        <div class="row mt-2">
+          <div class="col-md-3 col-6"><img class="img-fluid float-right" src="images/200x200.gif" alt=""></div>
+          <div class="col-md-3 col-6"><img class="img-fluid float-left" src="images/200x200.gif" alt=""></div>
+          <div class="col-md-3 col-6 mt-md-0 mt-1"><img class="img-fluid float-right" src="images/200x200.gif" alt=""></div>
+          <div class="col-md-3 col-6 mt-md-0 mt-1"><img class="img-fluid float-left" src="images/200x200.gif" alt=""></div>
+        </div>
+        <hr>
+        <div class="row">
+          <div class="col-md-3 col-6"><img class="img-fluid float-right" src="images/200x200.gif" alt=""></div>
+          <div class="col-md-3 col-6"><img class="img-fluid float-left" src="images/200x200.gif" alt=""></div>
+          <div class="col-md-3 col-6 mt-md-0 mt-1"><img class="img-fluid float-right" src="images/200x200.gif" alt=""></div>
+          <div class="col-md-3 col-6 mt-md-0 mt-1"><img class="img-fluid float-left" src="images/200x200.gif" alt=""></div>
+        </div>
+      </div>
+    </section>
+{% endblock content %}
+

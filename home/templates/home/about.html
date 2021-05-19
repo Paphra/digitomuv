@@ -1,0 +1,114 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}About Us{% endblock title %}
+
+{% block content_header %}
+  <div class="text-center mt-3">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <img src="{% static 'images/logos/cover.png' %}" width="50%" >
+        </div>
+        <div class="col-6 mx-auto">
+          <p> Welcome to DigitoMuv, for all your digital migration solutions, websites, social media channels and their management, custom software, and computer training. We help yoiu learn how to use different gadgets and help you establish your online presence. </p>
+        </div>
+      </div>
+      <hr>
+    </div>
+  </div>
+{% endblock %}
+
+{% block content %}
+  <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center">
+            <h1>Our Core Values</h1>
+            <p>We offer the best services governed by core values of integrity to ensure customer satisifcation and real time service delivery without delays, swift with quality and affordability. </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container mt-2">
+        <div class="row">
+          <div class="col-md-4 col-12">
+            <ul class="list-unstyled">
+              <li class="media">
+                <img class="mr-3" src="{% static 'images/35X35.gif' %}" alt="Generic placeholder image">
+                <div class="media-body">
+                  <h5 class="mt-0 mb-1">Affordability</h5>
+                  Value for money, get the best out of your payment. Providing the you with affordable yet valuable services, negotiable and available for everyone.
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-4 col-12">
+            <ul class="list-unstyled">
+              <li class="media">
+                <img class="mr-3" src="{% static 'images/35X35.gif' %}" alt="Generic placeholder image">
+                <div class="media-body">
+                  <h5 class="mt-0 mb-1">Quality Assurance</h5>
+                  Modern and sleek designs, focusing on tested functionality and applicability of the services provided, seeing to it that, the provided services achieve the inteded standards for any  given task.
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-4 col-12">
+            <ul class="list-unstyled">
+              <li class="media">
+                <img class="mr-3" src="{% static 'images/35X35.gif' %}" alt="Generic placeholder image">
+                <div class="media-body">
+                  <h5 class="mt-0 mb-1">Time Management</h5>
+                  Are you caught-up with time, want to achieve results but there is limited time? With a team of equiped developers, we make it possible to deliver your site or software in the shortest time. Trainings can be accelerated depending on the urgence of the tasks to be accomplished.
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-8 mx-auto">
+          <div class="">
+            <div class="row text-center">
+              <div class="text-center col-6 mx-auto">
+                <form id="feedbackForm" class="text-center" action="{% url 'feedback' %}" method="post">
+                  {% csrf_token %}
+                  <div class="card">
+                    <div class="card-header">
+                      <h4 class="text-center">
+                        Contact Us With Feedback
+                      </h4>
+                    </div>
+                    <div class="card-body">
+                      <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Name" aria-describedby="nameHelp">
+                        <span id="nameHelp" class="form-text text-muted" style="display: none;">Please enter your Full Name.</span>
+                      </div>
+                      <div class="form-group">
+                        <label for="email">E-Mail</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Email Address" aria-describedby="emailHelp">
+                        <span id="emailHelp" class="form-text text-muted" style="display: none;">Please enter a valid e-mail address.</span>
+                      </div>
+                      <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea rows="10" cols="100" class="form-control" id="message" name="message" placeholder="Message" aria-describedby="messageHelp"></textarea>
+                        <span id="messageHelp" class="form-text text-muted" style="display: none;">Please enter a message.</span>
+                      </div>
+                    </div>
+                    <div class="card-footer">
+                      <button type="submit" id="feedbackSubmit" class="btn btn-primary btn-lg"> Send</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+{% endblock content %}
