@@ -170,6 +170,31 @@ scratch. This page gets rid of all links and provides the needed markup only.
           </div>
           <!-- /.row -->
         {% endblock content %}
+        <!-- Messenger Chat Plugin Code -->
+        <div id="fb-root"></div>
+          <script>
+            window.fbAsyncInit = function() {
+              FB.init({
+                xfbml            : true,
+                version          : 'v10.0'
+              });
+            };
+
+            (function(d, s, id) {
+              var js, fjs = d.getElementsByTagName(s)[0];
+              if (d.getElementById(id)) return;
+              js = d.createElement(s); js.id = id;
+              js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+              fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+          </script>
+
+          <!-- Your Chat Plugin code -->
+          <div class="fb-customerchat"
+            attribution="page_inbox"
+            page_id="103054635308806">
+          </div>
+    
       </div><!-- /.container-fluid -->
     </div>
     <!-- /.content -->
@@ -185,30 +210,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
     </div>
   </aside>
   <!-- /.control-sidebar -->
-<!-- Messenger Chat Plugin Code -->
-    <div id="fb-root"></div>
-      <script>
-        window.fbAsyncInit = function() {
-          FB.init({
-            xfbml            : true,
-            version          : 'v10.0'
-          });
-        };
-
-        (function(d, s, id) {
-          var js, fjs = d.getElementsByTagName(s)[0];
-          if (d.getElementById(id)) return;
-          js = d.createElement(s); js.id = id;
-          js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
-          fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
-      </script>
-
-      <!-- Your Chat Plugin code -->
-      <div class="fb-customerchat"
-        attribution="page_inbox"
-        page_id="103054635308806">
-      </div>
   <!-- Main Footer -->
   <footer class="main-footer bg-dark text-white text-center">
     <div class="section">
@@ -229,12 +230,15 @@ scratch. This page gets rid of all links and provides the needed markup only.
               </address>
               <h4>Social</h4>
               <div class="row">
-                <div class="col-2"><img class="rounded-circle" src="images/32X32.gif" alt=""></div>
-                <div class="col-2"><img class="rounded-circle" src="images/32X32.gif" alt=""></div>
-                <div class="col-2"><img class="rounded-circle" src="images/32X32.gif" alt=""></div>
-                <div class="col-2"><img class="rounded-circle" src="images/32X32.gif" alt=""></div>
-                <div class="col-2"><img class="rounded-circle" src="images/32X32.gif" alt=""></div>
-                <div class="col-2"><img class="rounded-circle" src="images/32X32.gif" alt=""></div>
+                <div class="col-2">
+                  <a href="https://www.facebook.com/digitomuv" target="_blank">
+                    <img class="rounded-circle" src="{% static 'images/fb.jpg' %}" width="32" alt=""></div>
+                  </a>
+                <div class="col-2"><img class="rounded-circle" src="{% static 'images/32X32.gif' %}" alt=""></div>
+                <div class="col-2"><img class="rounded-circle" src="{% static 'images/32X32.gif' %}" alt=""></div>
+                <div class="col-2"><img class="rounded-circle" src="{% static 'images/32X32.gif' %}" alt=""></div>
+                <div class="col-2"><img class="rounded-circle" src="{% static 'images/32X32.gif' %}" alt=""></div>
+                <div class="col-2"><img class="rounded-circle" src="{% static 'images/32X32.gif' %}" alt=""></div>
               </div>
 
             </div>
