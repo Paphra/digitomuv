@@ -250,7 +250,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     </div>
                   </form>
                   <a href="{% url 'home' %}" class="btn btn-xs btn-danger"><i class="fa fa-home"></i> Home</a>
-                  <a href="{% url 'blog' %}" class="btn btn-xs btn-danger"><i class="fa fa-copy"></i> Blog</a>
+                  {% comment %} <a href="{% url 'blog' %}" class="btn btn-xs btn-danger"><i class="fa fa-copy"></i> Blog</a> {% endcomment %}
                   <a href="{% url 'services' %}" class="btn btn-xs btn-danger"><i class="fa fa-server"></i> Services</a>
                   <a href="{% url 'about' %}" class="btn btn-xs btn-danger"><i class="fa fa-info"></i> About</a>
                 </div>
