@@ -29,6 +29,8 @@ ALLOWED_HOSTS = [
     'localhost',
     '127.0.0.1',
     'digitomuv.xyz',
+    'test.digitomuv.xyz',
+    'demo.digitomuv.xyz',
 ]
 
 
