@@ -14,16 +14,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
     {% block title %}{% endblock title %} | {{ settings.COMPANY }}
   </title>
   {% block preview_description %}
-    <meta property="og:description" content="
-      Digitalize your processes from record keeping to automated report generation, reach out to a wider market base, 
-      and serve many customers, consumers and audiences interested in
-      your products and services, in an efficient and most satifying way. In this changing world, 
-      Digital Migration is the only way to embrace the change, with the increase in distance
-      learning, working, and interactions, we provide you a better to approach to different challenges ....."
-    >
+    <meta property="og:description" content="Digitalize your processes from record keeping to automated report generation, reach out to a wider market base, and serve many customers, consumers and audiences interested in your products and services, in an efficient and most satifying way. In this changing world, Digital Migration is the only way to embrace the change, with the increase in distance learning, working, and interactions, we provide you a better to approach to different challenges ...">
   {% endblock %}
   {% block preview_image %}
-    <meta property="og:image" content="https://digitomuv.xyz/{% static 'images/weby.png' %}" >
+    <link rel="image_src" href="{% static 'images/weby.png' %}" />
   {% endblock preview_image %}
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="{% static 'admin-lte/plugins/fontawesome-free/css/all.min.css' %}">
